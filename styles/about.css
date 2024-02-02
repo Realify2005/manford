@@ -53,34 +53,6 @@ body {
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
-  .header-background {
-    max-width: 100%;
-    height: 15vh;
-    background-size: cover;
-  }
-
-  #header {
-    padding: 5vh 10vw;
-  }
-  
-  #header > img {
-    height: 3vh;
-    width: 25vw;
-    margin-left: -5vw;
-  }
-
-  #header ul {
-    margin-top: -2vh;
-    margin-left: -7vw;
-    gap: 2vw;
-  }
-
-  #header li a {
-    font-size: 0.65vh;
-  }
-}
-
 #header li .header-active {
   color: #fb5b21;
 }
@@ -89,5 +61,143 @@ body {
   color: #fb5b21 !important;
 }
 
-/* Slideshow section */
-/* ---------------------------------------------------------------------------------------------------------*/
+.header-background > h1 {
+    color: white;
+    position: relative;
+    z-index: 900;
+    top: 17vh;
+    left: 43vw;
+    font-size: 6vh;
+}
+
+@media (max-width: 600px) {
+    .header-background {
+      max-width: 100%;
+      height: 15vh;
+      background-size: cover;
+    }
+  
+    #header {
+      padding: 5vh 10vw;
+    }
+    
+    #header > img {
+      height: 3vh;
+      width: 25vw;
+      margin-left: -5vw;
+    }
+  
+    #header ul {
+      margin-top: -2vh;
+      margin-left: -7vw;
+      gap: 2vw;
+    }
+  
+    #header li a {
+      font-size: 0.65vh;
+    }
+  
+    .header-background > h1 {
+      top: 8vh;
+      left: 34vw;
+      font-size: 3vh;
+    }
+  }
+
+/* About Us Section */
+
+/* Footer Company Info */
+.footer-top {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 4vw;
+    padding: 10vh 20vw;
+    background-color: #001137;
+    justify-content: center;
+  }
+  
+  .footer-top h2, .footer-top p {
+    color: white;
+  }
+  
+  .footer-top .dots {
+    margin-top: -1vh;
+  }
+  
+  .footer-top > .company-info > img[src="../images/logos/manford-white.png"] {
+    height: 6vh;
+    width: auto;
+  }
+  
+  .footer-top > .company-info .svg {
+    height: 2.25vh;
+    width: auto;
+    margin-right: 0.4vw;
+    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(60deg);
+  }
+  
+  .company-info .address, .company-info .phone, .company-info .email {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-top p, .footer-top h2 {
+    color: white;
+  }
+  
+  .footer-top ul h2, .footer-top li {
+    color: #b3b3b3;
+  }
+  
+  @media (max-width: 600px) {
+    .footer-top {
+      grid-auto-flow: row;
+    }
+  }
+  
+  /* Footer Products and Footer Company Links*/
+  .footer-top li {
+    list-style-type: none;
+  }
+  
+  .footer-top a {
+    text-decoration: none;
+    color: #fb5b21;
+  }
+  
+  .footer-top ul {
+    padding: 0;
+  }
+  
+  .footer-top > .company-links ul {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.4vh;
+  }
+  
+  /* Bottom Footer */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #001e61;
+  }
+  
+  .footer-bottom p {
+    color: white;
+  }
+  
+  .footer-bottom a {
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:visited {
+    color: #fb5b21 !important;
+  }
+  
+  .footer-bottom .svg {
+    height: 2.25vh;
+    width: auto;
+    filter: invert(100%);
+    margin-right: 0.3vw;
+  }
