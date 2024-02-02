@@ -84,11 +84,3 @@ function showSlides(n) {
 setInterval(function() {
   plusSlides(1); // Change to next slide
 }, 6000); // Adjust the interval as needed (in milliseconds)
-
-
-
-
-
-
-
-

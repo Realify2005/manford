@@ -1,0 +1,93 @@
+* {box-sizing:border-box}
+
+body {
+    width: 100vw;
+}
+
+/* Header section */
+/* ---------------------------------------------------------------------------------------------------------*/
+
+.header-background {
+    height: 40vh;
+    background-image: url('../images/banners/header-banner-manford-2.jpg');
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh; /* Adjust height as needed */
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 15vw;
+}
+
+#header.solid {
+    background-color: white;
+    border-bottom: 2px solid #fb5b21;
+}
+
+#header > img {
+  height: 3vh;
+  width: 10vw;
+}
+
+#header ul {
+  display: flex;
+  gap: 1vw;
+  margin: 0;
+}
+
+#header li{
+  list-style-type: none;
+}
+
+#header li a {
+  font-size: 2vh;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .header-background {
+    max-width: 100%;
+    height: 15vh;
+    background-size: cover;
+  }
+
+  #header {
+    padding: 5vh 10vw;
+  }
+  
+  #header > img {
+    height: 3vh;
+    width: 25vw;
+    margin-left: -5vw;
+  }
+
+  #header ul {
+    margin-top: -2vh;
+    margin-left: -7vw;
+    gap: 2vw;
+  }
+
+  #header li a {
+    font-size: 0.65vh;
+  }
+}
+
+#header li .header-active {
+  color: #fb5b21;
+}
+
+#header a:hover {
+  color: #fb5b21 !important;
+}
+
+/* Slideshow section */
+/* ---------------------------------------------------------------------------------------------------------*/
