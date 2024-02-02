@@ -1,28 +1,58 @@
 /* Header section */
 /* ---------------------------------------------------------------------------------------------------------*/
+
 #header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Adjust height as needed */
+    height: 10vh; /* Adjust height as needed */
     transition: background-color 0.3s ease;
     z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 15vw;
 }
 
 #header.solid {
     background-color: white;
+    border-bottom: 2px solid #fb5b21;
 }
 
-.invisible {
-    background-color: transparent;
+#header > img {
+  height: 5vh;
+  margin-top: -1.5vh;
+  width: 16vw;
 }
 
-.visible {
-    background-color: white; /* Change to desired solid color */
+#header ul {
+  display: flex;
+  gap: 1vw;
+  margin: 0;
 }
 
+#header li{
+  list-style-type: none;
+}
 
+#header li a {
+  font-size: 1vw;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+#header li .header-active {
+  color: #fb5b21;
+}
+
+#header a:hover {
+  color: #fb5b21 !important;
+}
+
+a:visited {
+  color: #fb5b21 !important;
+}
 
 /* Slideshow section */
 /* ---------------------------------------------------------------------------------------------------------*/
@@ -204,4 +234,174 @@ body {
         opacity: 1;
         display: none;
     }
+}
+
+/* Company About Section */
+.company-about {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 20vw;
+}
+
+.orange-line {
+  height: 0.25vh;
+  width: 3.5vw;
+  margin: 2vh 0;
+  background-color: #fb5b21;
+}
+
+.company-about > h2 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.company-about > p {
+  text-align: center;
+}
+
+/* Featured Section */
+
+.featured-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 15vw;
+}
+
+.featured-section > h2 {
+  font-weight: 600;
+  text-align: center;
+  color: #fb5b21;
+}
+
+.featured-section > p {
+  text-align: center;
+}
+
+.featured-container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4vw;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .featured-container {
+    grid-auto-flow: row;
+  }
+}
+
+.featured-product {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1vh;
+}
+
+.featured-product > .price {
+  color: #fb5b21;
+  font-weight: 500;
+}
+
+.featured-product > .description {
+  color: #666666;
+}
+
+.featured-product > img {
+  height: 30vh;
+  width: auto;
+}
+
+/* Footer Company Info */
+.footer-top {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4vw;
+  padding: 10vh 20vw;
+  background-color: #001137;
+  justify-content: center;
+}
+
+.footer-top h2, .footer-top p {
+  color: white;
+}
+
+.footer-top .dots {
+  margin-top: -1vh;
+}
+
+.footer-top > .company-info > img[src="./images/logos/manford-white.png"] {
+  height: 6vh;
+  width: auto;
+}
+
+.footer-top > .company-info .svg {
+  height: 2.25vh;
+  width: auto;
+  margin-right: 0.4vw;
+  filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(60deg);
+}
+
+.company-info .address, .company-info .phone, .company-info .email {
+  display: flex;
+  align-items: center;
+}
+
+.footer-top p, .footer-top h2 {
+  color: white;
+}
+
+.footer-top ul h2, .footer-top li {
+  color: #b3b3b3;
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    grid-auto-flow: row;
+  }
+}
+
+/* Footer Products and Footer Company Links*/
+.footer-top li {
+  list-style-type: none;
+}
+
+.footer-top a {
+  text-decoration: none;
+  color: #fb5b21;
+}
+
+.footer-top ul {
+  padding: 0;
+}
+
+.footer-top > .company-links ul {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 0.4vh;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #001e61;
+}
+
+.footer-bottom p {
+  color: white;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+}
+
+.footer-bottom .svg {
+  height: 2.25vh;
+  width: auto;
 }
