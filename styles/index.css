@@ -426,4 +426,6 @@ body {
 .footer-bottom .svg {
   height: 2.25vh;
   width: auto;
+  filter: invert(100%);
+  margin-right: 0.3vw;
 }
