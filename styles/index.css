@@ -36,10 +36,32 @@
 }
 
 #header li a {
-  font-size: 1vw;
+  font-size: 2vh;
   font-weight: 600;
   color: white;
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  #header {
+    padding: 5vh 10vw;
+  }
+  
+  #header > img {
+    height: 3vh;
+    width: 25vw;
+    margin-left: -5vw;
+  }
+
+  #header ul {
+    margin-top: -2vh;
+    margin-left: -7vw;
+    gap: 2vw;
+  }
+
+  #header li a {
+    font-size: 0.65vh;
+  }
 }
 
 #header li .header-active {
