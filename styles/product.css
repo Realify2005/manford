@@ -1,0 +1,254 @@
+* {box-sizing:border-box}
+
+body {
+    width: 100vw;
+}
+
+/* Header section */
+/* ---------------------------------------------------------------------------------------------------------*/
+
+.header-background {
+    height: 40vh;
+    background-image: url('../images/banners/header-banner-manford-2.jpg');
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh; /* Adjust height as needed */
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 15vw;
+}
+
+#header.solid {
+    background-color: white;
+    border-bottom: 2px solid #fb5b21;
+}
+
+#header > img {
+  height: 3vh;
+  width: 10vw;
+}
+
+#header ul {
+  display: flex;
+  gap: 1vw;
+  margin: 0;
+}
+
+#header li{
+  list-style-type: none;
+}
+
+#header li a {
+  font-size: 2vh;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+#header li .header-active {
+  color: #fb5b21;
+}
+
+#header a:hover {
+  color: #fb5b21 !important;
+}
+
+.header-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-background > h1 {
+    color: white;
+    position: relative;
+    z-index: 900;
+    font-size: 6vh;
+}
+
+@media (max-width: 600px) {
+    .header-background {
+      max-width: 100%;
+      height: 15vh;
+      background-size: cover;
+    }
+  
+    #header {
+      padding: 5vh 10vw;
+    }
+    
+    #header > img {
+      height: 3vh;
+      width: 25vw;
+      margin-left: -5vw;
+    }
+  
+    #header ul {
+      margin-top: -2vh;
+      margin-left: -7vw;
+      gap: 2vw;
+    }
+  
+    #header li a {
+      font-size: 1vh;
+    }
+  
+    .header-background > h1 {
+      font-size: 3vh;
+    }
+  }
+
+/* Main Content Section */
+
+.main-content {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 1fr 3fr;
+  padding: 10vh 20vw;
+}
+
+/* Sidebar */
+
+.sidebar a, .sidebar p {
+  text-decoration: none;
+  color: #666666;
+}
+
+.sidebar .category {
+  color: #fb5b21;
+  font-size: 2vh;
+}
+
+.orange-line {
+  height: 0.3vh;
+  width: 5vw;
+  margin: 2vh 0;
+  background-color: #fb5b21;
+}
+
+/* Product Area */
+
+.product-area-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-area-header .searchbar {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5vw;
+}
+
+.product-area-header input {
+  width: 20vw;
+}
+
+/* Footer Company Info */
+.footer-top {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 4vw;
+    padding: 10vh 20vw;
+    background-color: #001137;
+    justify-content: center;
+  }
+  
+  .footer-top h2, .footer-top p {
+    color: white;
+  }
+  
+  .footer-top .dots {
+    margin-top: -1vh;
+  }
+  
+  .footer-top > .company-info > img[src="../images/logos/manford-white.png"] {
+    height: 6vh;
+    width: auto;
+  }
+  
+  .footer-top > .company-info .svg {
+    height: 2.25vh;
+    width: auto;
+    margin-right: 0.4vw;
+    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(60deg);
+  }
+  
+  .company-info .address, .company-info .phone, .company-info .email {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-top p, .footer-top h2 {
+    color: white;
+  }
+  
+  .footer-top ul h2, .footer-top li {
+    color: #b3b3b3;
+  }
+  
+  @media (max-width: 600px) {
+    .footer-top {
+      grid-auto-flow: row;
+    }
+  }
+  
+  /* Footer Products and Footer Company Links*/
+  .footer-top li {
+    list-style-type: none;
+  }
+  
+  .footer-top a {
+    text-decoration: none;
+    color: #fb5b21;
+  }
+  
+  .footer-top ul {
+    padding: 0;
+  }
+  
+  .footer-top > .company-links ul {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.4vh;
+  }
+
+  .footer-top > .company-info .white-color {
+    color: white;
+  }
+  
+  /* Bottom Footer */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #001e61;
+  }
+  
+  .footer-bottom p {
+    color: white;
+  }
+  
+  .footer-bottom a {
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:visited {
+    color: #fb5b21 !important;
+  }
+  
+  .footer-bottom .svg {
+    height: 2.25vh;
+    width: auto;
+    filter: invert(100%);
+    margin-right: 0.3vw;
+  }

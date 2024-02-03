@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="../styles/outlets.css">
+    <link rel="stylesheet" href="../styles/product.css">
     <script src="../scripts/components/header.js" defer></script>
-    <title>Outlets - MANFORD - PT PASIFIK KREASI PRIMAJAYA</title>
+    <script src="../scripts/products/list-of-products.js" defer></script>
+    <title>Product - MANFORD - PT PASIFIK KREASI PRIMAJAYA</title>
 </head>
 <body>
     <div class="header-background">
@@ -16,39 +18,42 @@
                 <ul>
                     <li><a class="header-a" href="../index.html">HOME</a></li>
                     <li><a class="header-a" href="about.html">ABOUT</a></li>
-                    <li><a class="header-a" href="product.html">PRODUCTS</a></li>
-                    <li><a class="header-a header-active" href="outlets.html">OUTLETS</a></li>
+                    <li><a class="header-a header-active" href="product.html">PRODUCTS</a></li>
+                    <li><a class="header-a" href="outlets.html">OUTLETS</a></li>
                     <li><a class="header-a" href="contact-us.html">CONTACT US</a></li>
                 </ul>
             </div>
         </header>
-        <h1>Outlets</h1>
+        <h1>Products</h1>
     </div>
     <div class="main-content">
-        <div class="heading">
-            <img src="../images/icons/home.svg" alt="home icon">
-            <h4>OUTLET TERSEDIA DI:</h4> 
+        <div class="sidebar">
+            <h2>KATEGORI</h2>
+            <div class="orange-line"></div>
+            <p><a class="category" href="products/brands.html">BRANDS</a></p>
+            <p><a href="products/manford.html">Manford</a> (18)</p>
+            <p><a href="products/muscle-elements.html">Muscle Elements</a> (20)</p>
+            <p><a href="products/zuca.html">Zuca</a> (9)</p>
+            <p><a class="category" href="products/product-type.html">PRODUCT TYPE</a></p>
+            <p><a href="products/singlet.html">Singlet</a> (3)</p>
+            <p><a href="products/boxer.html">Boxer</a> (15)</p>
+            <p><a href="products/briefs.html">Briefs</a> (21)</p>
+            <p><a href="products/t-shirt.html">T-Shirt</a> (8)</p>
         </div>
-        <div class="orange-line"></div>
-        <div class="outlets">
-            <img src="../images/outlets/ada.jpg" alt="ada logo">
-            <img src="../images/outlets/aeon.png" alt="aeon logo">
-            <img src="../images/outlets/asia.png" alt="asia logo">
-            <img src="../images/outlets/carrefour.svg" alt="carrefour logo">
-            <img src="../images/outlets/gardena.png" alt="gardena logo">
-            <img src="../images/outlets/giant.png" alt="giant logo">
-            <img src="../images/outlets/harihari.jpeg" alt="hari hari logo">
-            <img src="../images/outlets/hero.png" alt="hero logo">
-            <img src="../images/outlets/irian.jpg" alt="irian logo">
-            <img src="../images/outlets/lottemart.png" alt="lottemart logo">
-            <img src="../images/outlets/luwes.png" alt="luwes logo">
-            <img src="../images/outlets/mirota.jpg" alt="mirota logo">
-            <img src="../images/outlets/ramai.jpeg" alt="ramai logo">
-            <img src="../images/outlets/star.png" alt="star logo">
-            <img src="../images/outlets/suzuya.jpg" alt="suzuya logo">
-            <img src="../images/outlets/transmart.svg" alt="transmart logo">
-            <img src="../images/outlets/trona.jpeg" alt="trona logo">
-            <img src="../images/outlets/yogya.svg" alt="yogya logo">
+        <div class="product-area">
+            <div class="product-area-header">
+                <div class="searchbar">
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <button>Search</button>
+                </div>
+                <select id="sortSelect">
+                    <option value="priceLowToHigh">Price: Low to High</option>
+                    <option value="priceHighToLow">Price: High to Low</option>
+                </select>
+            </div>
+            <div class="products">
+
+            </div>
         </div>
     </div>
     <footer>
