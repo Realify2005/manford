@@ -61,12 +61,16 @@ body {
   color: #fb5b21 !important;
 }
 
+.header-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header-background > h1 {
     color: white;
     position: relative;
     z-index: 900;
-    top: 17vh;
-    left: 45vw;
     font-size: 6vh;
 }
 
@@ -94,12 +98,10 @@ body {
     }
   
     #header li a {
-      font-size: 0.65vh;
+      font-size: 1vh;
     }
   
     .header-background > h1 {
-      top: 8vh;
-      left: 34vw;
       font-size: 3vh;
     }
   }
@@ -111,6 +113,12 @@ body {
 }
 
 /* About Us Section */
+
+.about-us {
+  opacity: 0;
+  animation: slideInFromBottom 1s ease forwards;
+  animation-delay: 1s;
+}
 
 .about-us h1, .about-us p {
   color: #666666;
@@ -129,6 +137,19 @@ body {
   width: 6vw;
   margin: 2vh 0;
   background-color: #fb5b21;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+      transform: translateY(100%);
+      opacity: 0.2;
+      display: none;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+      display: block;
+  }
 }
 
 /* Our Brands Section */
@@ -203,6 +224,10 @@ body {
     display: grid;
     grid-auto-flow: row;
     gap: 0.4vh;
+  }
+
+  .footer-top > .company-info .white-color {
+    color: white;
   }
   
   /* Bottom Footer */

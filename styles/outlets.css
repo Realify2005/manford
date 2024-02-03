@@ -61,12 +61,16 @@ body {
   color: #fb5b21 !important;
 }
 
+.header-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header-background > h1 {
     color: white;
     position: relative;
     z-index: 900;
-    top: 17vh;
-    left: 45vw;
     font-size: 6vh;
 }
 
@@ -94,12 +98,10 @@ body {
     }
   
     #header li a {
-      font-size: 0.65vh;
+      font-size: 1vh;
     }
   
     .header-background > h1 {
-      top: 8vh;
-      left: 34vw;
       font-size: 3vh;
     }
   }
@@ -117,6 +119,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  animation: fade-in 3s forwards 1s;
 }
 
 .main-content .heading img {
@@ -128,11 +132,22 @@ body {
   font-weight: 600;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Outlets logos section */
 
 .outlets {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    justify-items: center;
     gap: 2.5vw;
     width: 100%;
     margin-top: 2vh;
@@ -217,6 +232,10 @@ body {
     display: grid;
     grid-auto-flow: row;
     gap: 0.4vh;
+  }
+
+  .footer-top > .company-info .white-color {
+    color: white;
   }
   
   /* Bottom Footer */

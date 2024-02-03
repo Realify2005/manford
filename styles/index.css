@@ -66,7 +66,7 @@ body {
   }
 
   #header li a {
-    font-size: 0.65vh;
+    font-size: 1vh;
   }
 }
 
@@ -401,6 +401,10 @@ body {
   display: grid;
   grid-auto-flow: row;
   gap: 0.4vh;
+}
+
+.footer-top > .company-info .white-color {
+  color: white;
 }
 
 /* Bottom Footer */
