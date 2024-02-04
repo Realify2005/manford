@@ -158,11 +158,21 @@ body {
     max-width: 20vw;
 }
 
+.outlets .large-img {
+    height: 5vh;
+}
+
 .orange-line {
     height: 0.3vh;
     width: 6vw;
     margin: 2vh 0;
     background-color: #fb5b21;
+}
+
+@media (max-width: 600px) {
+  .outlets {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Footer Company Info */
