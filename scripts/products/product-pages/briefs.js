@@ -1,12 +1,13 @@
 import { allProducts } from '../list-of-products.js'
 import { updateProductsDisplay, generateProducts } from '../display-products.js'
 
-generateProducts(allProducts);
+let briefsProducts = allProducts.filter(product => product.type === 'briefs');
+generateProducts(briefsProducts);
 
 // Event listeners for search input and sorting select
 document.getElementById("searchInput").addEventListener("input", () => {
-    updateProductsDisplay(allProducts);
+    updateProductsDisplay(briefsProducts);
 });
 document.getElementById("sortSelect").addEventListener("change", () => {
-    updateProductsDisplay(allProducts);
+    updateProductsDisplay(briefsProducts);
 });

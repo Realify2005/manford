@@ -1,4 +1,4 @@
-const products = [
+export const allProducts = [
     // Singlets (3)
     { name: "MANFORD Single Cotton Combed 1 in 1 Pack [MFC-01]", price: 79900, priceRupiah: "Rp79,900.00", brand: "manford", type: "singlet", code: "MFC-01", description: "MFC 01 sangat cocok untuk anda yang ingin tampil elegant dengan singlet berbahan nyaman dan lembut."},
     { name: "MUSCLE ELEMENTS Singlet Salur 1 in 1 Pack [MEC-01]", price: 59900, priceRupiah: "Rp59,900.00", brand: "muscle-element", type: "singlet", code: "MEC-01", description: "MEC 01 cocok untuk yang menyukai gaya santai. Produk ini dibuat menggunakan bahan Cotton Blend yang akan membuat anda merasa nyaman."},
@@ -40,7 +40,7 @@ const products = [
     { name: "MUSCLE ELEMENTS Briefs Misty-Series 3 in 1 Pack [MEBKL-301]", price: 99900, priceRupiah: "Rp99,900.00", brand: "muscle-element", type: "briefs", code: "MEBKL-301", description: "MEBKL 301 didesain khusus untuk pria yang bergaya santai dan casual, dengan bahan yang sangat lembut dan nyaman akan menambah rasa percaya diri pengguna."},
     { name: "MUSCLE ELEMENTS Briefs Misty-Series 3 in 1 Pack [MEBKL-304]", price: 119900, priceRupiah: "Rp119,900.00", brand: "muscle-element", type: "briefs", code: "MEBKL-304", description: "MEBKL 304 cocok untuk yang menyukai gaya sport style, dengan desain karet luar font style menambah produk ini terlihat menarik. Produk ini dibuat menggunakan bahan Cotton Blend yang akan membuat anda merasa nyaman."},
     { name: "MUSCLE ELEMENTS Briefs Red-Green-Blue Waistband 3 in 1 Pack [MEBKL-303]", price: 149900, priceRupiah: "Rp149,900.00", brand: "muscle-element", type: "briefs", code: "MEBKL-303", description: "MEBKL 303 cocok untuk yang menyukai gaya sport style, dengan desain karet bergaya font menambah produk ini terlihat menarik. Produk ini dibuat menggunakan bahan Cotton Blend yang akan membuat anda merasa nyaman."},
-    { name: "MUSCLE ELEMENTS Briefs Seri Misty 3 in 1 Pack [MEB-031]", price: 74900, priceRupiah: "Rp74,900.00", brand: "muscle-element", type: "briefs", code: "MEB-301", description: "MEB 031 cocok untuk yang menyukai gaya sport style, desain karet bergaya simple dengan label hitam ditengah menambah produk ini terlihat menarik. Produk ini dibuat menggunakan bahan Cotton Blend yang akan membuat anda merasa nyaman."},
+    { name: "MUSCLE ELEMENTS Briefs Seri Misty 3 in 1 Pack [MEB-031]", price: 74900, priceRupiah: "Rp74,900.00", brand: "muscle-element", type: "briefs", code: "MEB-031", description: "MEB 031 cocok untuk yang menyukai gaya sport style, desain karet bergaya simple dengan label hitam ditengah menambah produk ini terlihat menarik. Produk ini dibuat menggunakan bahan Cotton Blend yang akan membuat anda merasa nyaman."},
     { name: "MUSCLE ELEMENTS Briefs Solid-Color 3 in 1 Pack [MEBKL-306]", price: 99900, priceRupiah: "Rp99,900.00", brand: "muscle-element", type: "briefs", code: "MEBKL-306", description: "MEBKL 306 cocok untuk yang menyukai gaya sport style, dengan desain karet luar font style menambah produk ini terlihat menarik. Produk ini dibuat menggunakan bahan Cotton Blend yang akan membuat anda merasa nyaman."},
     { name: "MUSCLE ELEMENTS Briefs Solid-Series 3 in 1 Pack [MEBKL-305]", price: 99900, priceRupiah: "Rp99,900.00", brand: "muscle-element", type: "briefs", code: "MEBKL-305", description: "MEBKL 304 cocok untuk yang menyukai gaya sport style, dengan desain karet luar font style menambah produk ini terlihat menarik. Produk ini dibuat menggunakan bahan Cotton Blend yang akan membuat anda merasa nyaman."},
     { name: "MUSCLE ELEMENTS Briefs Stripe 5 in 1 Pack [MEB-051]", price: 159900, priceRupiah: "Rp159,900.00", brand: "muscle-element", type: "briefs", code: "MEB-051", description: "MEB 051 cocok untuk yang menyukai gaya sport style, dengan desain karet bergaya font menambah produk ini terlihat menarik. Produk ini dibuat menggunakan bahan Cotton Blend yang akan membuat anda merasa nyaman."},
@@ -60,47 +60,3 @@ const products = [
     { name: "MUSCLE ELEMENTS Oblong R-Neck Abu-Maroon 2 in 1 Pack [MES-01-AM]", price: 179900, priceRupiah: "Rp179,900.00", brand: "muscle-element", type: "t-shirt", code: "MES-01-AM", description: "MES 01 AM ini cocok untuk anda yang ingin tampil modis dan tetap terlihat santai dengan bahan yang sangat lembut dan nyaman untuk dikenakan sehari-hari."},
     { name: "MUSCLE ELEMENTS Oblong R-Neck Navy-Hijau 2 in 1 Pack [MES-01-NH]", price: 179900, priceRupiah: "Rp179,900.00", brand: "muscle-element", type: "t-shirt", code: "MES-01-NH", description: "MES 01 NH ini cocok untuk anda yang ingin tampil modis dan tetap terlihat santai dengan bahan yang sangat lembut dan nyaman untuk dikenakan sehari-hari."},
 ];
-
-function displayProducts() {
-    const searchKeyword = document.getElementById("searchInput").value.toLowerCase();
-    const sortCriteria = document.getElementById("sortSelect").value;
-
-    let filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchKeyword));
-
-    if (sortCriteria === "priceLowToHigh") {
-      filteredProducts.sort((a, b) => a.price - b.price);
-    } else if (sortCriteria === "priceHighToLow") {
-      filteredProducts.sort((a, b) => b.price - a.price);
-    }
-
-    const productListContainer = document.querySelector(".products");
-    productListContainer.innerHTML = "";
-
-    if (filteredProducts.length > 0) {
-      filteredProducts.forEach(product => {
-        const productItem = document.createElement("div");
-        productItem.innerHTML = `<p>${product.name} - ${product.priceRupiah}</p>`;
-        productListContainer.appendChild(productItem);
-      });
-    } else {
-        productListContainer.innerHTML = '<p>No results found with that query</p>'
-    }
-  }
-
-function initialiseProducts() {
-    const productListContainer = document.querySelector(".products");
-    productListContainer.innerHTML = '';
-
-    products.forEach( (product) => {
-        const productItem = document.createElement("div");
-        productItem.innerHTML = `<p>${product.name} - ${product.priceRupiah}</p>`
-        productListContainer.appendChild(productItem);
-    })
-}
-
-initialiseProducts();
-
-// Event listeners for search input and sorting select
-document.getElementById("searchInput").addEventListener("input", displayProducts);
-document.getElementById("sortSelect").addEventListener("change", displayProducts);
-

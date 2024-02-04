@@ -1,3 +1,5 @@
+// Same as header.js, but this one is for files that require "../../images" instead of "../images" to refer to their images.
+
 document.addEventListener('DOMContentLoaded', function () {
     var header = document.getElementById('header');
     var headerimg = document.getElementById('headerimg');
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (scrollPosition > scrollThreshold) {
             header.classList.add('solid');
-            headerimg.src = "../images/logos/manford-blue.png";
+            headerimg.src = "../../images/logos/manford-blue.png";
             header_a.forEach( (a) => {
               if (!a.classList.contains('header-active')) {
                 a.style.color = "black";
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         } else {
             header.classList.remove('solid');
-            headerimg.src = "../images/logos/manford-white.png";
+            headerimg.src = "../../images/logos/manford-white.png";
             header_a.forEach ( (a) => {
               if (!a.classList.contains('header-active')) {
                 a.style.color = "white";
