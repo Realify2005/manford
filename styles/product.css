@@ -237,7 +237,7 @@ body {
     margin-top: -1vh;
   }
   
-  .footer-top > .company-info > img[src="../images/logos/manford-white.png"] {
+  .footer-top > .company-info > img[src="../../images/logos/manford-white.png"] {
     height: 6vh;
     width: auto;
   }
