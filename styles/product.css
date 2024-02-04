@@ -143,12 +143,6 @@ body {
   align-items: center;
 }
 
-.product-area-header .searchbar {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 0.5vw;
-}
-
 .product-area-header input {
   width: 20vw;
 }
