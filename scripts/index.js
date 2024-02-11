@@ -17,8 +17,6 @@ headerLogo.addEventListener('click', () => {
 
 
 // Sliders
-
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -34,22 +32,22 @@ showSlides(slideIndex = n);
 
 // Function to continuously display slides and update dots
 function showSlides(n) {
-let i;
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-  slides[i].style.display = "none";
-}
-for (i = 0; i < dots.length; i++) {
-  dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
 
-// Call showSlides() at regular intervals (every 2 seconds in this example)
+// Call showSlides() at regular intervals (every 6 seconds in this example)
 setInterval(function() {
-plusSlides(1); // Change to next slide
+  plusSlides(1); // Change to next slide
 }, 6000); // Adjust the interval as needed (in milliseconds)
