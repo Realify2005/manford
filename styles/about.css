@@ -155,6 +155,31 @@ body {
 /* Our Brands Section */
 .our-brands h2 {
   color: #666666;
+  font-size: 4.5vh;
+}
+
+.our-brands .logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.our-brands .logos img {
+  height: auto;
+  width: 30%;
+}
+
+@media (max-width: 600px) {
+  .our-brands .logos {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 5vh;
+  }
+
+  .our-brands .logos img {
+    width: 100%;
+  }
 }
 
 /* Footer Company Info */
