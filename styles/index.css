@@ -148,7 +148,7 @@ body {
 }
 
 /* Banner button slide in animation */
-.mySlides > button {
+.mySlides > a > button {
     color: white;
     font-size: 1vw;
     padding: 0.4vh 0.6vw;
